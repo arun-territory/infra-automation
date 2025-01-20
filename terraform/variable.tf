@@ -20,8 +20,3 @@ variable "node_count" {
   default     = 1
 }
 
-variable "credentials_json" {
-  description = "The contents of a GCP credentials JSON file"
-  type        = string
-  sensitive   = true
-}
