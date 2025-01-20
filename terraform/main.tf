@@ -18,6 +18,8 @@ resource "google_container_cluster" "primary" {
   node_config {
     service_account = "githubactions-sa@turnkey-guild-441104-f3.iam.gserviceaccount.com"
 
+  }
+
   initial_node_count = var.node_count
 
   node_config {
