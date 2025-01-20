@@ -17,15 +17,19 @@ provider "google" {
 resource "google_container_cluster" "primary" {
   name     = var.cluster_name
   location = var.region
-  
 
-  # Remove the default node pool
   remove_default_node_pool = true
   initial_node_count       = 1
 
-  # Minimum necessary configurations
   network    = "default"
   subnetwork = "default"
+
+  node_config {
+    service_account = "githubactions-sa@turnkey-guild-441104-f3.iam.gserviceaccount.com"
+    oauth_scopes = [
+      "https://www.googleapis.com/auth/cloud-platform"
+    ]
+  }
 }
 
 # Separate node pool

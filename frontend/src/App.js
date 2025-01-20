@@ -9,8 +9,8 @@ function App() {
     region: '',
     clusterName: '',
     nodeCount: 3,
-    serviceAccountKey: ''
-  });
+    serviceAccount: 'githubactions-sa@turnkey-guild-441104-f3.iam.gserviceaccount.com' // Service account email
+});
 
   const [deployments, setDeployments] = useState([]);
 
