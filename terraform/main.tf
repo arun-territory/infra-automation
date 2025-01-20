@@ -11,7 +11,7 @@ terraform {
 provider "google" {
   project     = var.project_id
   region      = var.region
-  credentials = var.credentials_json
+  
 }
 
 resource "google_container_cluster" "primary" {
