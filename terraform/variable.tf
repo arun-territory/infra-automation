@@ -1,4 +1,4 @@
-// terraform/variables.tf
+# variables.tf
 variable "project_id" {
   description = "GCP Project ID"
   type        = string
@@ -17,5 +17,11 @@ variable "cluster_name" {
 variable "node_count" {
   description = "Number of nodes in the cluster"
   type        = number
-  default     = 3
+  default     = 1
+}
+
+variable "credentials_json" {
+  description = "The contents of a GCP credentials JSON file"
+  type        = string
+  sensitive   = true
 }
